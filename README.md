@@ -1,6 +1,6 @@
-# import-sort-style-module-alias
+# import-sort-style-custom
 
-[![GitHub Actions Build Status](https://github.com/ifiokjr/import-sort-style-module-alias/workflows/Node%20CI/badge.svg)](https://github.com/ifiokjr/import-sort-style-module-alias/actions?query=workflow%3A%22Node+CI%22)
+[![GitHub Actions Build Status](https://github.com/ifiokjr/import-sort-style-custom/workflows/Node%20CI/badge.svg)](https://github.com/ifiokjr/import-sort-style-custom/actions?query=workflow%3A%22Node+CI%22)
 [![Version][version]][npm]
 [![Weekly Downloads][downloads-badge]][npm]
 [![Typed Codebase][typescript]](./src/index.ts)
@@ -15,7 +15,7 @@
 
 ## Table of Contents
 
-- [import-sort-style-module-alias](#import-sort-style-module-alias)
+- [import-sort-style-custom](#import-sort-style-custom)
   - [Table of Contents](#table-of-contents)
   - [Usage](#usage)
     - [Setup](#setup)
@@ -27,7 +27,7 @@
 
 ## Usage
 
-`import-sort-style-module-alias` is designed to be used with [`import-sort`](https://github.com/renke/import-sort) and provide a customisable way for ordering imports when aliases are also used for internal imports.
+`import-sort-style-custom` is designed to be used with [`import-sort`](https://github.com/renke/import-sort) and provide a customisable way for ordering imports when aliases are also used for internal imports.
 
 Sort the modules in the following order.
 
@@ -73,13 +73,13 @@ import { relativeBottom } from './relative/bottom';
 First, install the plugin and the required parser:
 
 ```bash
-npm install --save-dev import-sort-style-module-alias import-sort-parser-typescript
+npm install --save-dev import-sort-style-custom import-sort-parser-typescript
 ```
 
 or
 
 ```bash
-yarn add -D import-sort-style-module-alias import-sort-parser-typescript
+yarn add -D import-sort-style-custom import-sort-parser-typescript
 ```
 
 Add the following to your `package.json` file.
@@ -155,7 +155,7 @@ Then add the following configuration to your `package.json`, with any options yo
 ## Versioning
 
 This project uses [SemVer](http://semver.org/) for versioning. For the versions available, see the
-[tags on this repository](https://github.com/ifiokjr/import-sort-style-module-alias/tags).
+[tags on this repository](https://github.com/ifiokjr/import-sort-style-custom/tags).
 
 <br />
 
@@ -175,10 +175,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
 
-[version]: https://flat.badgen.net/npm/v/#import-sort-style-module-alias
-[npm]: https://npmjs.com/package/import-sort-style-module-alias
+[version]: https://flat.badgen.net/npm/v/import-sort-style-custom
+[npm]: https://npmjs.com/package/import-sort-style-custom
 [license]: https://flat.badgen.net/badge/license/MIT/purple
-[size]: https://bundlephobia.com/result?p=#import-sort-style-module-alias
-[size-badge]: https://flat.badgen.net/bundlephobia/minzip/#import-sort-style-module-alias
+[size]: https://bundlephobia.com/result?p=#import-sort-style-custom
+[size-badge]: https://flat.badgen.net/bundlephobia/minzip/import-sort-style-custom
 [typescript]: https://flat.badgen.net/badge/icon/TypeScript/?icon=typescript&label&labelColor=blue&color=555555
-[downloads-badge]: https://badgen.net/npm/dw/#import-sort-style-module-alias/red?icon=npm
+[downloads-badge]: https://badgen.net/npm/dw/import-sort-style-custom/red?icon=npm

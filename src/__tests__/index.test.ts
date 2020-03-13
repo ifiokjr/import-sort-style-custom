@@ -2,13 +2,10 @@ import { basename, resolve } from 'path';
 
 import { sortImports } from 'import-sort';
 import * as parser from 'import-sort-parser-typescript';
-import { clearCache } from 'tsconfig-resolver';
 
-import sortStyleModuleAlias, { AliasedModuleSettings } from '../';
+import sortStyleCustom, { CustomSettings } from '../';
 
 const mockFileName = resolve(__dirname, '__fixtures__', basename(__filename));
-
-afterEach(clearCache);
 
 const unsortedImports = `
 import Runner from 'run';
@@ -20,11 +17,11 @@ import a from 'abc';
 import first from '@first';
 `;
 test('sorts when a tsconfig has paths', () => {
-  const settings: Partial<AliasedModuleSettings> = {};
+  const settings: Partial<CustomSettings> = {};
   const sorted = sortImports(
     unsortedImports,
     parser,
-    sortStyleModuleAlias,
+    sortStyleCustom,
     mockFileName,
     settings,
   );
@@ -44,11 +41,11 @@ test('sorts when a tsconfig has paths', () => {
 });
 
 test('ignores the tsconfig with setting', () => {
-  const settings: Partial<AliasedModuleSettings> = { ignoreTsConfig: true };
+  const settings: Partial<CustomSettings> = { ignoreTsConfig: true };
   const sorted = sortImports(
     unsortedImports,
     parser,
-    sortStyleModuleAlias,
+    sortStyleCustom,
     mockFileName,
     settings,
   );
@@ -67,13 +64,13 @@ test('ignores the tsconfig with setting', () => {
 });
 
 test('accepts a custom tsconfig `fileName`', () => {
-  const settings: Partial<AliasedModuleSettings> = {
+  const settings: Partial<CustomSettings> = {
     tsconfigFileName: 'tsconfig.custom.json',
   };
   const sorted = sortImports(
     unsortedImports,
     parser,
-    sortStyleModuleAlias,
+    sortStyleCustom,
     mockFileName,
     settings,
   );
@@ -93,11 +90,11 @@ test('accepts a custom tsconfig `fileName`', () => {
 });
 
 test('default module sort when no tsconfig is present', () => {
-  const settings: Partial<AliasedModuleSettings> = {};
+  const settings: Partial<CustomSettings> = {};
   const sorted = sortImports(
     unsortedImports,
     parser,
-    sortStyleModuleAlias,
+    sortStyleCustom,
     '/',
     settings,
   );
@@ -115,13 +112,13 @@ test('default module sort when no tsconfig is present', () => {
 });
 
 test('sorts with extra aliases', () => {
-  const settings: Partial<AliasedModuleSettings> = {
+  const settings: Partial<CustomSettings> = {
     extraAliases: ['@alias', 'abc'],
   };
   const sorted = sortImports(
     unsortedImports,
     parser,
-    sortStyleModuleAlias,
+    sortStyleCustom,
     undefined,
     settings,
   );
@@ -141,11 +138,11 @@ test('sorts with extra aliases', () => {
 });
 
 test('supports alias splats', () => {
-  const settings: Partial<AliasedModuleSettings> = { wildcardAtStart: true };
+  const settings: Partial<CustomSettings> = { wildcardAtStart: true };
   const sorted = sortImports(
     `import {Awesome} from 'make/simple';\n${unsortedImports}`,
     parser,
-    sortStyleModuleAlias,
+    sortStyleCustom,
     mockFileName,
     settings,
   );
@@ -166,11 +163,11 @@ test('supports alias splats', () => {
 });
 
 test('can ignore aliases', () => {
-  const settings: Partial<AliasedModuleSettings> = { ignoredAliases: ['@*'] };
+  const settings: Partial<CustomSettings> = { ignoredAliases: ['@*'] };
   const sorted = sortImports(
     unsortedImports,
     parser,
-    sortStyleModuleAlias,
+    sortStyleCustom,
     mockFileName,
     settings,
   );
@@ -190,13 +187,13 @@ test('can ignore aliases', () => {
 });
 
 test('can push aliases to the bottom', () => {
-  const settings: Partial<AliasedModuleSettings> = {
+  const settings: Partial<CustomSettings> = {
     bottomAliases: ['./f*', '@first'],
   };
   const sorted = sortImports(
     unsortedImports,
     parser,
-    sortStyleModuleAlias,
+    sortStyleCustom,
     mockFileName,
     settings,
   );
@@ -217,13 +214,13 @@ test('can push aliases to the bottom', () => {
 
 test('default aliased relative imports in relative section', () => {
   // ;
-  const settings: Partial<AliasedModuleSettings> = {
+  const settings: Partial<CustomSettings> = {
     extraAliases: ['./relative'],
   };
   const sorted = sortImports(
     `import { DeepRelative } from '../../deep/relative';\nimport Relative from './relative'${unsortedImports}`,
     parser,
-    sortStyleModuleAlias,
+    sortStyleCustom,
     mockFileName,
     settings,
   );

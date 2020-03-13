@@ -1,5 +1,5 @@
 {
-  "name": "import-sort-style-module-alias",
+  "name": "import-sort-style-custom",
   "version": "1.0.0",
   "keywords": [
     "import-sort",
@@ -19,7 +19,7 @@
     "src"
   ],
   "main": "dist/index.js",
-  "module": "dist/import-sort-style-module-alias.esm.js",
+  "module": "dist/import-sort-style-custom.esm.js",
   "typings": "dist/index.d.ts",
   "scripts": {
     "build": "tsdx build",

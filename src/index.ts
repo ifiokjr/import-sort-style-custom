@@ -10,7 +10,7 @@ import {
   tsconfigResolver,
 } from 'tsconfig-resolver';
 
-const defaultSettings: AliasedModuleSettings = {
+const defaultSettings: CustomSettings = {
   ignoreTsConfig: false,
   tsconfigFileName: 'tsconfig.json',
   cacheStrategy: CacheStrategy.Directory,
@@ -23,7 +23,7 @@ const defaultSettings: AliasedModuleSettings = {
 /**
  * The aliased module configuration object.
  */
-export interface AliasedModuleSettings {
+export interface CustomSettings {
   /**
    * When `true` will not search for any tsconfig.json. This might provide a slight performance boost.
    *
@@ -81,7 +81,7 @@ export interface AliasedModuleSettings {
   bottomAliases: string[];
 }
 
-const getSettings = (rawSettings: object = {}): AliasedModuleSettings => {
+const getSettings = (rawSettings: object = {}): CustomSettings => {
   return { ...defaultSettings, ...rawSettings };
 };
 
@@ -96,7 +96,7 @@ const patternToRegExp = (pattern: string) =>
  * an alias.
  */
 const isAliasedModuleCreator = (
-  { extraAliases, wildcardAtStart, ignoredAliases }: AliasedModuleSettings,
+  { extraAliases, wildcardAtStart, ignoredAliases }: CustomSettings,
   config: TsConfigResult['config'],
 ) => {
   const regExps: RegExp[] = [];
@@ -187,7 +187,7 @@ const isBottomModuleCreator = (bottomModules: string[]) => {
  * - Relative module imports
  * - Bottom imports, which are set in the settings object as `bottomAliases`
  */
-const sortStyleModuleAlias: IStyle = (styleApi, fileName, rawSettings) => {
+const sortStyleCustom: IStyle = (styleApi, fileName, rawSettings) => {
   // console.log({ fileName, settings });
   const settings = getSettings(rawSettings);
   const config = settings.ignoreTsConfig
@@ -269,4 +269,4 @@ const sortStyleModuleAlias: IStyle = (styleApi, fileName, rawSettings) => {
   ];
 };
 
-export default sortStyleModuleAlias;
+export default sortStyleCustom;
