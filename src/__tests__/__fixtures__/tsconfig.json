@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@alias": [],
+      "@z": [],
+      "@z/*": [],
+      "@run": [],
+      "@splat/*": [],
+      "*/simple": [],
+      "run": []
+    }
+  }
+}

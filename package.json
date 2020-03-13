@@ -1,0 +1,90 @@
+{
+  "name": "import-sort-style-module-alias",
+  "version": "0.0.0",
+  "keywords": [
+    "import-sort",
+    "prettier",
+    "sort",
+    "tsconfig",
+    "style"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Ifiok Jr.",
+    "email": "ifiokotung@gmail.com",
+    "url": "https://ifiokjr.com"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/import-sort-style-module-alias.esm.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsdx build",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "start": "tsdx watch",
+    "test": "tsdx test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint",
+      "pre-push": "yarn tsc --noEmit && yarn lint && yarn test"
+    }
+  },
+  "prettier": {
+    "plugins": [
+      "./node_modules/prettier-plugin-import-sort",
+      "./node_modules/prettier-plugin-packagejson"
+    ],
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "dependencies": {
+    "escape-string-regexp": "^2.0.0",
+    "fast-memoize": "^2.5.2",
+    "import-sort-parser": "^6.0.0",
+    "import-sort-style": "^6.0.0",
+    "tsconfig-resolver": "^1.0.1"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^5.0.0",
+    "@semantic-release/git": "^9.0.0",
+    "@types/jest": "^25.1.4",
+    "conventional-changelog-conventionalcommits": "^4.2.3",
+    "husky": "^4.2.3",
+    "import-sort": "^6.0.0",
+    "import-sort-parser-typescript": "^6.0.0",
+    "lint-staged": "^10.0.8",
+    "prettier-plugin-import-sort": "^0.0.3",
+    "prettier-plugin-packagejson": "^2.0.10",
+    "semantic-release": "^17.0.4",
+    "tsdx": "^0.12.3",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3"
+  },
+  "peerDependencies": {},
+  "importSort": {
+    ".js, .ts, .tsx": {
+      "parser": "typescript",
+      "style": "../",
+      "options": {
+        "cacheStrategy": "directory",
+        "wildcardAtStart": false,
+        "ignoredAliases": [],
+        "extraAliases": [
+          "@my-alias",
+          "simple"
+        ],
+        "bottomAliases": [
+          "@bottom",
+          "./relative/bottom"
+        ]
+      }
+    }
+  }
+}
