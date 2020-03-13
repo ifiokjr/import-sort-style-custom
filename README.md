@@ -88,7 +88,7 @@ Add the following to your `package.json` file.
 "importSort": {
   ".js, .ts, .tsx": {
     "parser": "typescript",
-    "style": "module-alias",
+    "style": "custom",
     "options": {
       "cacheStrategy": "directory",
       "wildcardAtStart": false,
@@ -104,15 +104,15 @@ Add the following to your `package.json` file.
 
 ### Options
 
-| Property           | Type                               | Default           | Description                                                                                                                                                                                                                                      |
-| ------------------ | ---------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `ignoreTsConfig`   | `boolean`                          | `false`           | When `true` will not search for any tsconfig.json. This might provide a slight performance boost. This options takes precedence over the other tsconfig options.                                                                                 |
-| `tsconfigFileName` | `string`                           | `'tsconfig.json'` | The name to use when searching for a TsConfig.                                                                                                                                                                                                   |
-| `cacheStrategy`    | `'directory' | 'never' | 'always'` | `'directory'`     | Determines how often to check for a new parent tsconfig file. By default it will check every time the directory changes. If you only have one tsconfig.json file for the whole project with consistent it makes sense to update this to 'never'. |
-| `wildcardAtStart`  | `boolean`                          | `false`           | When true will allow patterns which start with a `*` character.                                                                                                                                                                                  |
-| `extraAliases`     | `string[]`                         | `[]`              | Extra patterns that should be recognised as internal aliases. The pattern is the same as `tsconfig` files support supporting `*` as the wildcard character.                                                                                      |
-| `ignoredAliases`   | `string[]`                         | `[]`              | Ignore all paths that match this pattern. This takes preference over any matching aliases. If a module path matches the alias but doesn't The pattern is the same as `tsconfig` files support supporting `*` as the wildcard character.          |
-| `bottomAliases`    | `string[]`                         | `[]`              | Files matching this pattern will be moved to a special group at the end of the imports. The pattern is the same as `tsconfig` files support supporting `*` as the wildcard character.                                                            |
+| Property           | Type                                     | Default           | Description                                                                                                                                                                                                                                      |
+| ------------------ | ---------------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `ignoreTsConfig`   | `boolean`                                | `false`           | When `true` will not search for any tsconfig.json. This might provide a slight performance boost. This options takes precedence over the other tsconfig options.                                                                                 |
+| `tsconfigFileName` | `string`                                 | `'tsconfig.json'` | The name to use when searching for a TsConfig.                                                                                                                                                                                                   |
+| `cacheStrategy`    | `'directory'` or `'never'` or `'always'` | `'directory'`     | Determines how often to check for a new parent tsconfig file. By default it will check every time the directory changes. If you only have one tsconfig.json file for the whole project with consistent it makes sense to update this to 'never'. |
+| `wildcardAtStart`  | `boolean`                                | `false`           | When true will allow patterns which start with a `*` character.                                                                                                                                                                                  |
+| `extraAliases`     | `string[]`                               | `[]`              | Extra patterns that should be recognised as internal aliases. The pattern is the same as `tsconfig` files support supporting `*` as the wildcard character.                                                                                      |
+| `ignoredAliases`   | `string[]`                               | `[]`              | Ignore all paths that match this pattern. This takes preference over any matching aliases. If a module path matches the alias but doesn't The pattern is the same as `tsconfig` files support supporting `*` as the wildcard character.          |
+| `bottomAliases`    | `string[]`                               | `[]`              | Files matching this pattern will be moved to a special group at the end of the imports. The pattern is the same as `tsconfig` files support supporting `*` as the wildcard character.                                                            |
 
 <br />
 
@@ -146,7 +146,7 @@ Then add the following configuration to your `package.json`, with any options yo
 "importSort": {
   ".js, .ts, .tsx": {
     "parser": "typescript",
-    "style": "module-alias",
+    "style": "custom",
     "options": {}
   }
 }
