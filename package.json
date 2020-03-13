@@ -45,14 +45,15 @@
     "trailingComma": "all"
   },
   "resolutions": {
-    "mem": ">=4"
+    "mem": ">=4",
+    "minimist": ">=1.2.2"
   },
   "dependencies": {
     "escape-string-regexp": "^2.0.0",
     "fast-memoize": "^2.5.2",
     "import-sort-parser": "^6.0.0",
     "import-sort-style": "^6.0.0",
-    "tsconfig-resolver": "^1.0.1"
+    "tsconfig-resolver": "^1.1.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.0",
