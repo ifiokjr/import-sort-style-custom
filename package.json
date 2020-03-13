@@ -44,6 +44,9 @@
     "singleQuote": true,
     "trailingComma": "all"
   },
+  "resolutions": {
+    "mem": ">=4"
+  },
   "dependencies": {
     "escape-string-regexp": "^2.0.0",
     "fast-memoize": "^2.5.2",
