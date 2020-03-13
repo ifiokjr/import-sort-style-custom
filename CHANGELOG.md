@@ -1,3 +1,10 @@
+### [1.1.1](https://github.com/ifiokjr/import-sort-style-custom/compare/v1.1.0...v1.1.1) (2020-03-13)
+
+
+### Bug Fixes
+
+* update dependencies ([33cfe49](https://github.com/ifiokjr/import-sort-style-custom/commit/33cfe497c96db2d4a955e350e7a7a80fa9374456))
+
 ## [1.1.0](https://github.com/ifiokjr/import-sort-style-custom/compare/v1.0.0...v1.1.0) (2020-03-13)
 
 
