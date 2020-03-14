@@ -1,3 +1,15 @@
+## [2.1.0](https://github.com/ifiokjr/import-sort-style-custom/compare/v2.0.0...v2.1.0) (2020-03-14)
+
+
+### Features
+
+* new option `spaceAfterAliases` ([9a6d08d](https://github.com/ifiokjr/import-sort-style-custom/commit/9a6d08dfed18ebe3c655209a7722e0eec76c161d))
+
+
+### Performance Improvements
+
+* improve performance by caching check values ([ae43d3e](https://github.com/ifiokjr/import-sort-style-custom/commit/ae43d3e1af49f41ee3b19da6f54f9d6636eebb2e))
+
 ## [2.0.0](https://github.com/ifiokjr/import-sort-style-custom/compare/v1.1.1...v2.0.0) (2020-03-14)
 
 
