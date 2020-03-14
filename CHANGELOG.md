@@ -1,3 +1,17 @@
+## [2.0.0](https://github.com/ifiokjr/import-sort-style-custom/compare/v1.1.1...v2.0.0) (2020-03-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* rename `tsconfigFileName` to `tsconfigName`.
+
+Allow passing a direct path to the tsconfig file into the configuration.
+This allows you to more easily select the desired config to use.
+
+### Features
+
+* add `tsconfigFilePath` configuration option ([c305cc4](https://github.com/ifiokjr/import-sort-style-custom/commit/c305cc476bf84309fd548b91cc5f8fe81dccf1b8))
+
 ### [1.1.1](https://github.com/ifiokjr/import-sort-style-custom/compare/v1.1.0...v1.1.1) (2020-03-13)
 
 
