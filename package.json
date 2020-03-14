@@ -1,7 +1,7 @@
 {
   "name": "import-sort-style-custom",
-  "description": "Sort your imports using import-sort with aliases and custom configurations",
   "version": "2.0.0",
+  "description": "Sort your imports using import-sort with aliases and custom configurations",
   "keywords": [
     "import-sort",
     "prettier",
@@ -37,7 +37,7 @@
   },
   "prettier": {
     "plugins": [
-      "./node_modules/prettier-plugin-import-sort",
+      "./node_modules/prettier-plugin-sorted",
       "./node_modules/prettier-plugin-packagejson"
     ],
     "printWidth": 80,
@@ -64,17 +64,15 @@
     "import-sort": "^6.0.0",
     "import-sort-parser-typescript": "^6.0.0",
     "lint-staged": "^10.0.8",
-    "prettier-plugin-import-sort": "^0.0.3",
     "prettier-plugin-packagejson": "^2.0.10",
+    "prettier-plugin-sorted": "^1.1.0",
     "semantic-release": "^17.0.4",
     "tsdx": "^0.12.3",
     "tslib": "^1.11.1",
     "typescript": "^3.8.3"
   },
   "importSort": {
-    ".js, .ts, .tsx": {
-      "parser": "typescript",
-      "style": "../",
+    ".ts,.tsx": {
       "options": {
         "cacheStrategy": "directory",
         "wildcardAtStart": false,
