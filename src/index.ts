@@ -115,6 +115,7 @@ const isAliasedModuleCreator = (
   { extraAliases, wildcardAtStart, ignoredAliases }: CustomSettings,
   config: TsConfigResult['config'],
 ) => {
+  const cache = new Map<IImport, boolean>();
   const regExps: RegExp[] = [];
   const ignoredRegExps: RegExp[] = [];
   const paths = config?.compilerOptions?.paths ?? {};
@@ -133,7 +134,7 @@ const isAliasedModuleCreator = (
     ignoredRegExps.push(patternToRegExp(alias));
   }
 
-  return (imported: IImport) => {
+  const calculateReturn = (imported: IImport) => {
     // No alias patterns to check. Return false for a negative match.
     if (!regExps.length) {
       return false;
@@ -158,6 +159,19 @@ const isAliasedModuleCreator = (
     // Nothing matched so return a negative match.
     return false;
   };
+
+  return (imported: IImport) => {
+    const cachedValue = cache.get(imported);
+
+    if (cachedValue !== undefined) {
+      return cachedValue;
+    }
+
+    const value = calculateReturn(imported);
+    cache.set(imported, value);
+
+    return value;
+  };
 };
 
 /**
@@ -165,6 +179,7 @@ const isAliasedModuleCreator = (
  * bottom.
  */
 const isBottomModuleCreator = (bottomModules: string[]) => {
+  const cache = new Map<IImport, boolean>();
   const regExps: RegExp[] = [];
 
   // Populate the array of pattern matchers for bottom modules
@@ -172,7 +187,7 @@ const isBottomModuleCreator = (bottomModules: string[]) => {
     regExps.push(patternToRegExp(alias));
   }
 
-  return (imported: IImport) => {
+  const calculateReturn = (imported: IImport) => {
     // No patterns to check. Return false to show this is import should not be
     // placed at the bottom.
     if (!regExps.length) {
@@ -189,6 +204,19 @@ const isBottomModuleCreator = (bottomModules: string[]) => {
 
     // Nothing matched so return a negative match.
     return false;
+  };
+
+  return (imported: IImport) => {
+    const cachedValue = cache.get(imported);
+
+    if (cachedValue !== undefined) {
+      return cachedValue;
+    }
+
+    const value = calculateReturn(imported);
+    cache.set(imported, value);
+
+    return value;
   };
 };
 
