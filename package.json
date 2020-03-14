@@ -53,7 +53,7 @@
     "escape-string-regexp": "^2.0.0",
     "import-sort-parser": "^6.0.0",
     "import-sort-style": "^6.0.0",
-    "tsconfig-resolver": "^2.1.0"
+    "tsconfig-resolver": "^2.1.1"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.0",

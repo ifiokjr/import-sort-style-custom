@@ -8952,7 +8952,7 @@ ts-jest@^24.0.2:
     semver "^5.5"
     yargs-parser "10.x"
 
-tsconfig-resolver@^2.0.1, tsconfig-resolver@^2.1.0:
+tsconfig-resolver@^2.0.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/tsconfig-resolver/-/tsconfig-resolver-2.1.0.tgz#08b0197fe47b3f6da5d76af19af1a605fc1b816d"
   integrity sha512-/n7hteDWaePwsJg9ucmIY/PNOEnRZht6EexdBdcfnAN5CJREosino3dy8um0TiQ4uTlemlVphi/Fm3cp8jBmoQ==
@@ -8961,6 +8961,18 @@ tsconfig-resolver@^2.0.1, tsconfig-resolver@^2.1.0:
     "@types/resolve" "^1.14.0"
     json5 "^2.1.1"
     prettier-plugin-packagejson "^2.0.10"
+    resolve "^1.15.1"
+    strip-bom "^4.0.0"
+    type-fest "^0.12.0"
+
+tsconfig-resolver@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/tsconfig-resolver/-/tsconfig-resolver-2.1.1.tgz#71e3cc763b3466fd54bbf41e205db803a3d97998"
+  integrity sha512-7HJQgbQ+RhUrbvQ5QCf7X++oMq0O2CTp4sK/06VgA9c2wSq1MDir/sjKa97cSAZSBeZuVx1gmhkouplYytnpaw==
+  dependencies:
+    "@types/json5" "^0.0.30"
+    "@types/resolve" "^1.14.0"
+    json5 "^2.1.1"
     resolve "^1.15.1"
     strip-bom "^4.0.0"
     type-fest "^0.12.0"
