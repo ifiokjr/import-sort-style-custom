@@ -1,3 +1,10 @@
+### [2.1.1](https://github.com/ifiokjr/import-sort-style-custom/compare/v2.1.0...v2.1.1) (2020-03-14)
+
+
+### Bug Fixes
+
+* update `tsconfig-resolver` dependency ([9730ace](https://github.com/ifiokjr/import-sort-style-custom/commit/9730acede0c6a40db84386ff27e82cc844b861ab))
+
 ## [2.1.0](https://github.com/ifiokjr/import-sort-style-custom/compare/v2.0.0...v2.1.0) (2020-03-14)
 
 
