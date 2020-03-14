@@ -16,6 +16,7 @@ import {b} from '@alias';
 import a from 'abc';
 import first from '@first';
 `;
+
 test('sorts when a tsconfig has paths', () => {
   const settings: Partial<CustomSettings> = {};
   const sorted = sortImports(
@@ -65,7 +66,7 @@ test('ignores the tsconfig with setting', () => {
 
 test('accepts a custom tsconfig `fileName`', () => {
   const settings: Partial<CustomSettings> = {
-    tsconfigFileName: 'tsconfig.custom.json',
+    tsconfigName: 'tsconfig.custom.json',
   };
   const sorted = sortImports(
     unsortedImports,

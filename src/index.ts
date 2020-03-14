@@ -12,7 +12,8 @@ import {
 
 const defaultSettings: CustomSettings = {
   ignoreTsConfig: false,
-  tsconfigFileName: 'tsconfig.json',
+  tsconfigName: 'tsconfig.json',
+  tsconfigFilePath: undefined,
   cacheStrategy: CacheStrategy.Directory,
   wildcardAtStart: false,
   ignoredAliases: [],
@@ -36,7 +37,13 @@ export interface CustomSettings {
    *
    * @default 'tsconfig.json'
    */
-  tsconfigFileName: string;
+  tsconfigName: string;
+
+  /**
+   * A direct path to the tsconfig file relative to the `cwd`.
+   */
+  tsconfigFilePath: string | undefined;
+
   /**
    * Determines how often to check for a new parent tsconfig file. By default it
    * will check every time the directory changes. If you only have one
@@ -195,7 +202,8 @@ const sortStyleCustom: IStyle = (styleApi, fileName, rawSettings) => {
     : tsconfigResolver({
         cacheStrategy: settings.cacheStrategy,
         cwd: fileName ? dirname(fileName) : undefined,
-        fileName: settings.tsconfigFileName,
+        searchName: settings.tsconfigName,
+        filePath: settings.tsconfigFilePath,
       }).config;
 
   const isAliasedModule = isAliasedModuleCreator(settings, config);

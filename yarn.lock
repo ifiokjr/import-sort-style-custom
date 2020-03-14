@@ -1353,6 +1353,13 @@
   dependencies:
     "@types/node" "*"
 
+"@types/resolve@^1.14.0":
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/@types/resolve/-/resolve-1.14.0.tgz#c95d696264f8e53e764a7c0b83e9317b458b76c3"
+  integrity sha512-bmjNBW6tok+67iOsASeYSJxSgY++BIR35nGyGLORTDirhra9reJ0shgGL3U7KPDUbOBCx8JrlCjd4d/y5uiMRQ==
+  dependencies:
+    "@types/node" "*"
+
 "@types/retry@^0.12.0":
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/@types/retry/-/retry-0.12.0.tgz#2b35eccfcee7d38cd72ad99232fbd58bffb3c84d"
@@ -3613,11 +3620,6 @@ fast-levenshtein@~2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
-
-fast-memoize@^2.5.2:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/fast-memoize/-/fast-memoize-2.5.2.tgz#79e3bb6a4ec867ea40ba0e7146816f6cdce9b57e"
-  integrity sha512-Ue0LwpDYErFbmNnZSF0UH6eImUwDmogUO1jyE+JbN2gsQz/jICm1Ve7t9QT0rNSsfJt+Hs4/S3GnsDVjL4HVrw==
 
 fastq@^1.6.0:
   version "1.6.1"
@@ -8949,13 +8951,16 @@ ts-jest@^24.0.2:
     semver "^5.5"
     yargs-parser "10.x"
 
-tsconfig-resolver@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/tsconfig-resolver/-/tsconfig-resolver-1.1.0.tgz#7791a20a12f5c5723c53b4aca4adfc675fe027f2"
-  integrity sha512-U/DYhTo3fyJU28O86rV9gXVVJiKA7DpzxpcWXnnu8Phn1nKfGIbMzz6CiyXuJsVuOOBTvFM5hnRzyMED//BmLw==
+tsconfig-resolver@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/tsconfig-resolver/-/tsconfig-resolver-2.0.1.tgz#166e3d2841df1bc58c5017cc8b0db4ee21ab9482"
+  integrity sha512-vZ3zrDMtdLF2bQnNIQ9tPfBz09xdtfE8fhVTQfdvxuMM1pkZbWirTQryjFG2xC1l1hIbeKl33bPd/O9LHn+qIQ==
   dependencies:
     "@types/json5" "^0.0.30"
+    "@types/resolve" "^1.14.0"
     json5 "^2.1.1"
+    prettier-plugin-packagejson "^2.0.10"
+    resolve "^1.15.1"
     strip-bom "^4.0.0"
     type-fest "^0.12.0"
 

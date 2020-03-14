@@ -1,5 +1,6 @@
 {
   "name": "import-sort-style-custom",
+  "description": "Sort your imports using import-sort with aliases and custom configurations",
   "version": "1.1.1",
   "keywords": [
     "import-sort",
@@ -50,10 +51,9 @@
   },
   "dependencies": {
     "escape-string-regexp": "^2.0.0",
-    "fast-memoize": "^2.5.2",
     "import-sort-parser": "^6.0.0",
     "import-sort-style": "^6.0.0",
-    "tsconfig-resolver": "^1.1.0"
+    "tsconfig-resolver": "^2.0.1"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.0",
@@ -71,7 +71,6 @@
     "tslib": "^1.11.1",
     "typescript": "^3.8.3"
   },
-  "peerDependencies": {},
   "importSort": {
     ".js, .ts, .tsx": {
       "parser": "typescript",
