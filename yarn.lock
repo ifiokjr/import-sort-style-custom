@@ -8951,10 +8951,10 @@ ts-jest@^24.0.2:
     semver "^5.5"
     yargs-parser "10.x"
 
-tsconfig-resolver@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/tsconfig-resolver/-/tsconfig-resolver-2.0.1.tgz#166e3d2841df1bc58c5017cc8b0db4ee21ab9482"
-  integrity sha512-vZ3zrDMtdLF2bQnNIQ9tPfBz09xdtfE8fhVTQfdvxuMM1pkZbWirTQryjFG2xC1l1hIbeKl33bPd/O9LHn+qIQ==
+tsconfig-resolver@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/tsconfig-resolver/-/tsconfig-resolver-2.1.0.tgz#08b0197fe47b3f6da5d76af19af1a605fc1b816d"
+  integrity sha512-/n7hteDWaePwsJg9ucmIY/PNOEnRZht6EexdBdcfnAN5CJREosino3dy8um0TiQ4uTlemlVphi/Fm3cp8jBmoQ==
   dependencies:
     "@types/json5" "^0.0.30"
     "@types/resolve" "^1.14.0"

@@ -12,6 +12,7 @@ import {
 
 const defaultSettings: CustomSettings = {
   ignoreTsConfig: false,
+  spaceAfterAliases: true,
   tsconfigName: 'tsconfig.json',
   tsconfigFilePath: undefined,
   cacheStrategy: CacheStrategy.Directory,
@@ -68,6 +69,14 @@ export interface CustomSettings {
    * wildcard character.
    */
   extraAliases: string[];
+
+  /**
+   * When true this will insert a space after the alias section causing the
+   * relative imports to appear as a separate block.
+   *
+   * @default true
+   */
+  spaceAfterAliases: boolean;
 
   /**
    * Ignore all paths that match this pattern. This takes preference over any
@@ -250,7 +259,8 @@ const sortStyleCustom: IStyle = (styleApi, fileName, rawSettings) => {
       sort: moduleName(naturally),
       sortNamedMembers: alias(unicode),
     },
-    { separator: true },
+
+    ...(settings.spaceAfterAliases ? [{ separator: true }] : []),
 
     // Relative - `import … from "./foo"; import … from "../foo";`
     {

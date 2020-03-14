@@ -214,7 +214,6 @@ test('can push aliases to the bottom', () => {
 });
 
 test('default aliased relative imports in relative section', () => {
-  // ;
   const settings: Partial<CustomSettings> = {
     extraAliases: ['./relative'],
   };
@@ -238,6 +237,29 @@ test('default aliased relative imports in relative section', () => {
     import { DeepRelative } from '../../deep/relative';
     import {a} from './foo';
     import Relative from './relative'
+    "
+  `);
+});
+
+test('spaceAfterAliases', () => {
+  const settings: Partial<CustomSettings> = { spaceAfterAliases: false };
+  const sorted = sortImports(
+    unsortedImports,
+    parser,
+    sortStyleCustom,
+    mockFileName,
+    settings,
+  );
+
+  expect(sorted.code).toMatchInlineSnapshot(`
+    "import first from '@first';
+    import a from 'abc';
+
+    import {b} from '@alias';
+    import {Splat} from '@splat/anything';
+    import {B, C, b, c} from '@z';
+    import Runner from 'run';
+    import {a} from './foo';
     "
   `);
 });
