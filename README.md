@@ -9,7 +9,7 @@
 
 <br />
 
-**Sort your imports taking into account your aliased tsconfig paths and other custom options. These paths are treated as internal imports.**
+> Sort your imports taking into account your aliased tsconfig paths and other custom options. These paths are treated as internal imports.
 
 <br />
 
@@ -18,6 +18,7 @@
 - [import-sort-style-custom](#import-sort-style-custom)
   - [Table of Contents](#table-of-contents)
   - [Usage](#usage)
+  - [Demo](#demo)
     - [Setup](#setup)
     - [Options](#options)
     - [Prettier](#prettier)
@@ -65,6 +66,14 @@ import Relative from './relative';
 import Bottom from '@bottom';
 import { relativeBottom } from './relative/bottom';
 ```
+
+<br />
+
+## Demo
+
+The following animated flow shows what it's like when this is setup with prettier in your editor.
+
+![Demo Screen flow](https://github.com/adam-p/markdown-here/raw/master/assets/demo.gif "Demonstration with prettier")
 
 <br />
 
