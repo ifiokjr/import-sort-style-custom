@@ -8965,10 +8965,10 @@ tsconfig-resolver@^2.0.1:
     strip-bom "^4.0.0"
     type-fest "^0.12.0"
 
-tsconfig-resolver@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/tsconfig-resolver/-/tsconfig-resolver-2.1.1.tgz#71e3cc763b3466fd54bbf41e205db803a3d97998"
-  integrity sha512-7HJQgbQ+RhUrbvQ5QCf7X++oMq0O2CTp4sK/06VgA9c2wSq1MDir/sjKa97cSAZSBeZuVx1gmhkouplYytnpaw==
+tsconfig-resolver@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/tsconfig-resolver/-/tsconfig-resolver-2.2.0.tgz#025d85206b06844bae1845368e8a99c92456dafa"
+  integrity sha512-Imw1t5hpIOGeAhtDPuSldXZkoTCc1w4D3ldGVWNecJ62ABDnp6zgqGSzUhPc9o3mO/XHm8DN+eaHBmNmp6gBDQ==
   dependencies:
     "@types/json5" "^0.0.30"
     "@types/resolve" "^1.14.0"
