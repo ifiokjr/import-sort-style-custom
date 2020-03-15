@@ -7,6 +7,12 @@
 ![MIT License][license]
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 <br />
 
 > Sort your imports taking into account your aliased tsconfig paths and other custom options. These paths are treated as internal imports.
@@ -158,6 +164,7 @@ Add the following configuration to your `package.json`, with any options you'd a
 ```
 
 <br />
+
 ## Demo
 
 The following animated flow shows what it's like when this is setup with prettier in your editor.
@@ -177,17 +184,21 @@ This project uses [SemVer](http://semver.org/) for versioning. For the versions 
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://ifiokjr.com"><img src="https://avatars2.githubusercontent.com/u/1160934?v=4" width="100px;" alt=""/><br /><sub><b>Ifiok Jr.</b></sub></a><br /><a href="https://github.com/ifiokjr/import-sort-style-custom/commits?author=ifiokjr" title="Code">💻</a></td>
+  </tr>
+</table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 [version]: https://flat.badgen.net/npm/v/import-sort-style-custom
 [npm]: https://npmjs.com/package/import-sort-style-custom
