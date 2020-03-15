@@ -18,10 +18,10 @@
 - [import-sort-style-custom](#import-sort-style-custom)
   - [Table of Contents](#table-of-contents)
   - [Usage](#usage)
-  - [Demo](#demo)
     - [Setup](#setup)
     - [Options](#options)
     - [Prettier](#prettier)
+  - [Demo](#demo)
   - [Versioning](#versioning)
   - [License](#license)
   - [Contributors](#contributors)
@@ -69,14 +69,6 @@ import { relativeBottom } from './relative/bottom';
 
 <br />
 
-## Demo
-
-The following animated flow shows what it's like when this is setup with prettier in your editor.
-
-![Demo Screen flow](https://github.com/adam-p/markdown-here/raw/master/assets/demo.gif "Demonstration with prettier")
-
-<br />
-
 ### Setup
 
 First, install the plugin and the required parser:
@@ -117,10 +109,10 @@ Add the following to your `package.json` file.
 | ------------------- | ---------------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `ignoreTsConfig`    | `boolean`                                | `false`           | When `true` will not search for any tsconfig.json. This might provide a slight performance boost. This options takes precedence over the other tsconfig options.                                                                                 |
 | `tsconfigName`      | `string`                                 | `'tsconfig.json'` | The name to use when searching for a TsConfig.                                                                                                                                                                                                   |
-| `tsconfigFilePath`  | `string`                                 | `undefined`       | A direct path to the tsconfig file relative to the `cwd`.                                        |
+| `tsconfigFilePath`  | `string`                                 | `undefined`       | A direct path to the tsconfig file relative to the `cwd`.                                                                                                                                                                                        |
 | `cacheStrategy`     | `'directory'` or `'never'` or `'always'` | `'directory'`     | Determines how often to check for a new parent tsconfig file. By default it will check every time the directory changes. If you only have one tsconfig.json file for the whole project with consistent it makes sense to update this to 'never'. |
-| `wildcardAtStart`   | `boolean`                                | `false`           | When `true` will allow patterns which start with a `*` character.                                                                                                                                                                                  |
-| `spaceAfterAliases` | `boolean`                                | `true`            | When `true` this will insert a space after the alias section causing the relative imports to appear as a separate block.                                                                                      |
+| `wildcardAtStart`   | `boolean`                                | `false`           | When `true` will allow patterns which start with a `*` character.                                                                                                                                                                                |
+| `spaceAfterAliases` | `boolean`                                | `true`            | When `true` this will insert a space after the alias section causing the relative imports to appear as a separate block.                                                                                                                         |
 | `extraAliases`      | `string[]`                               | `[]`              | Extra patterns that should be recognised as internal aliases. The pattern is the same as `tsconfig` files support supporting `*` as the wildcard character.                                                                                      |
 | `ignoredAliases`    | `string[]`                               | `[]`              | Ignore all paths that match this pattern. This takes preference over any matching aliases. If a module path matches the alias but doesn't The pattern is the same as `tsconfig` files support supporting `*` as the wildcard character.          |
 | `bottomAliases`     | `string[]`                               | `[]`              | Files matching this pattern will be moved to a special group at the end of the imports. The pattern is the same as `tsconfig` files support supporting `*` as the wildcard character.                                                            |
@@ -164,6 +156,15 @@ Add the following configuration to your `package.json`, with any options you'd a
   }
 }
 ```
+
+<br />
+## Demo
+
+The following animated flow shows what it's like when this is setup with prettier in your editor.
+
+![Demo Screen flow](https://raw.githubusercontent.com/ifiokjr/import-sort-style-custom/master/assets/demo.gif 'Demonstration with prettier')
+
+<br />
 
 ## Versioning
 
