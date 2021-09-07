@@ -9,6 +9,10 @@
     "tsconfig",
     "style"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ifiokjr/import-sort-style-custom.git"
+  },
   "license": "MIT",
   "author": {
     "name": "Ifiok Jr.",
